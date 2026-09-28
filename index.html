@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ChiChi</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <p class="subtitle">Choose a color for their shirts</p>
+
+    <!-- CHARACTERS -->
+    <div class="characters">
+
+        <!-- PIG -->
+        <div class="character">
+            <div class="animal pig">
+
+                <div class="ear left"></div>
+                <div class="ear right"></div>
+
+                <div class="head">
+                    <div class="eye left-eye"></div>
+                    <div class="eye right-eye"></div>
+
+                    <div class="snout">
+                        <div class="nostril left"></div>
+                        <div class="nostril right"></div>
+                    </div>
+                </div>
+
+                <div class="body">
+
+                    <div class="shirt pig-shirt">
+                        <div class="shirt-line"></div>
+                    </div>
+
+                    <div class="leg left-leg"></div>
+                    <div class="leg right-leg"></div>
+
+                </div>
+
+                <div class="tail pig-tail"></div>
+
+            </div>
+
+            <h2>Piggy</h2>
+        </div>
+
+
+        <!-- HORSE -->
+        <div class="character">
+
+            <div class="animal horse">
+
+                <div class="horse-ear left"></div>
+                <div class="horse-ear right"></div>
+
+                <div class="mane"></div>
+
+                <div class="horse-head">
+
+                    <div class="horse-eye left-eye"></div>
+                    <div class="horse-eye right-eye"></div>
+
+                    <div class="horse-muzzle"></div>
+
+                </div>
+
+                <div class="body horse-body">
+
+                    <div class="shirt horse-shirt">
+                        <div class="shirt-line"></div>
+                    </div>
+
+                    <div class="leg left-leg"></div>
+                    <div class="leg right-leg"></div>
+
+                </div>
+
+                <div class="horse-tail"></div>
+
+            </div>
+
+            <h2>Horsey</h2>
+
+        </div>
+
+    </div>
+
+
+    <!-- COLOR PICKER -->
+    <div class="color-panel">
+
+        <p>Choose shirt color</p>
+
+        <div class="colors">
+
+            <button class="color red" data-color="#ff5c6c"></button>
+
+            <button class="color orange" data-color="#ff9f43"></button>
+
+            <button class="color yellow" data-color="#ffd93d"></button>
+
+            <button class="color green" data-color="#55c98a"></button>
+
+            <button class="color blue" data-color="#5b9df9"></button>
+
+            <button class="color purple" data-color="#a66cff"></button>
+
+            <button
+                    class="color pink"
+                    data-color="#ff69b4"
+                    onclick="togglePinkMusic()">
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- MUSIC -->
+<audio id="bgMusic" loop>
+    <source src="giọng-nam-một-nhành-hoa-xanhrb-chill-ver.mp3" type="audio/mpeg">
+</audio>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

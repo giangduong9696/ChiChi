@@ -1,0 +1,593 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background:
+            radial-gradient(circle at top, #fff7fb, #ffeef6 50%, #ffdce9);
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: min(1000px, 95vw);
+
+    text-align: center;
+
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 48px;
+    color: #ff5b8d;
+
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #8c7180;
+    font-size: 17px;
+}
+
+
+/* =========================
+   CHARACTERS
+========================= */
+
+.characters {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    gap: 120px;
+
+    margin-top: 40px;
+}
+
+.character h2 {
+    margin-top: 20px;
+
+    color: #6d5360;
+
+    font-size: 22px;
+}
+
+
+/* =========================
+   ANIMAL BASE
+========================= */
+
+.animal {
+    position: relative;
+
+    width: 230px;
+    height: 280px;
+
+    animation: float 3s ease-in-out infinite;
+}
+
+.character:nth-child(2) .animal {
+    animation-delay: -1.5s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* =========================
+   PIG
+========================= */
+
+.pig .head {
+    position: absolute;
+
+    width: 150px;
+    height: 135px;
+
+    background: #ffb6c9;
+
+    border-radius: 50%;
+
+    top: 20px;
+    left: 40px;
+
+    z-index: 3;
+}
+
+
+/* pig ears */
+
+.pig .ear {
+    position: absolute;
+
+    width: 50px;
+    height: 65px;
+
+    background: #ff9fb9;
+
+    border-radius: 50%;
+
+    top: 15px;
+
+    z-index: 2;
+}
+
+.pig .ear.left {
+    left: 25px;
+
+    transform: rotate(-30deg);
+}
+
+.pig .ear.right {
+    right: 25px;
+
+    transform: rotate(30deg);
+}
+
+
+/* pig eyes */
+
+.eye {
+    position: absolute;
+
+    width: 13px;
+    height: 17px;
+
+    background: #3d2b33;
+
+    border-radius: 50%;
+
+    top: 53px;
+}
+
+.left-eye {
+    left: 43px;
+}
+
+.right-eye {
+    right: 43px;
+}
+
+
+/* pig snout */
+
+.snout {
+    position: absolute;
+
+    width: 65px;
+    height: 42px;
+
+    background: #f58faa;
+
+    border-radius: 50%;
+
+    left: 42px;
+    bottom: 17px;
+}
+
+.nostril {
+    position: absolute;
+
+    width: 9px;
+    height: 7px;
+
+    background: #b95673;
+
+    border-radius: 50%;
+
+    top: 17px;
+}
+
+.nostril.left {
+    left: 15px;
+}
+
+.nostril.right {
+    right: 15px;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+.body {
+    position: absolute;
+
+    width: 145px;
+    height: 125px;
+
+    background: #ffb6c9;
+
+    border-radius: 55px 55px 35px 35px;
+
+    top: 135px;
+    left: 43px;
+
+    z-index: 2;
+}
+
+
+/* =========================
+   SHIRT
+========================= */
+
+.shirt {
+    position: absolute;
+
+    width: 145px;
+    height: 90px;
+
+    background: #ff5c6c;
+
+    left: 0;
+    top: 20px;
+
+    border-radius: 35px 35px 25px 25px;
+
+    transition:
+            background-color 0.5s ease,
+            transform 0.3s ease;
+}
+
+.shirt-line {
+    position: absolute;
+
+    width: 100%;
+    height: 8px;
+
+    background: rgba(255,255,255,0.35);
+
+    top: 25px;
+}
+
+
+/* =========================
+   LEGS
+========================= */
+
+.leg {
+    position: absolute;
+
+    width: 35px;
+    height: 65px;
+
+    background: #ffb6c9;
+
+    border-radius: 20px;
+
+    bottom: -42px;
+}
+
+.left-leg {
+    left: 25px;
+}
+
+.right-leg {
+    right: 25px;
+}
+
+
+/* =========================
+   PIG TAIL
+========================= */
+
+.pig-tail {
+    position: absolute;
+
+    width: 35px;
+    height: 35px;
+
+    border: 7px solid #ff9fb9;
+
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+
+    border-radius: 50%;
+
+    right: 15px;
+    top: 160px;
+
+    transform: rotate(30deg);
+}
+
+
+/* =========================
+   HORSE
+========================= */
+
+.horse .horse-head {
+    position: absolute;
+
+    width: 145px;
+    height: 165px;
+
+    background: #c98b61;
+
+    border-radius: 48% 48% 42% 42%;
+
+    top: 20px;
+    left: 42px;
+
+    z-index: 3;
+}
+
+
+/* horse ears */
+
+.horse-ear {
+    position: absolute;
+
+    width: 45px;
+    height: 70px;
+
+    background: #b87550;
+
+    border-radius: 70% 20% 70% 20%;
+
+    top: 5px;
+
+    z-index: 2;
+}
+
+.horse-ear.left {
+    left: 35px;
+    transform: rotate(-20deg);
+}
+
+.horse-ear.right {
+    right: 35px;
+    transform: rotate(20deg);
+}
+
+
+/* horse mane */
+
+.mane {
+    position: absolute;
+
+    width: 55px;
+    height: 165px;
+
+    background: #55352d;
+
+    border-radius: 50%;
+
+    left: 30px;
+    top: 25px;
+
+    z-index: 1;
+}
+
+
+/* horse eyes */
+
+.horse-eye {
+    position: absolute;
+
+    width: 14px;
+    height: 18px;
+
+    background: #2f2424;
+
+    border-radius: 50%;
+
+    top: 55px;
+}
+
+.horse-eye.left-eye {
+    left: 35px;
+}
+
+.horse-eye.right-eye {
+    right: 35px;
+}
+
+
+/* muzzle */
+
+.horse-muzzle {
+    position: absolute;
+
+    width: 80px;
+    height: 55px;
+
+    background: #e1a77e;
+
+    border-radius: 50%;
+
+    bottom: 18px;
+    left: 32px;
+}
+
+
+/* horse body */
+
+.horse-body {
+    background: #c98b61;
+}
+
+
+/* horse tail */
+
+.horse-tail {
+    position: absolute;
+
+    width: 65px;
+    height: 100px;
+
+    background: #55352d;
+
+    border-radius: 50%;
+
+    right: 8px;
+    top: 155px;
+
+    transform: rotate(-25deg);
+
+    z-index: 1;
+}
+
+
+/* =========================
+   COLOR PANEL
+========================= */
+
+.color-panel {
+    margin-top: 50px;
+
+    padding: 20px 30px;
+
+    display: inline-block;
+
+    background: rgba(255,255,255,0.75);
+
+    border-radius: 30px;
+
+    box-shadow: 0 15px 40px rgba(160,80,120,0.15);
+
+    backdrop-filter: blur(10px);
+}
+
+.color-panel p {
+    margin-bottom: 15px;
+
+    color: #80616f;
+
+    font-weight: bold;
+}
+
+
+.colors {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+
+.color {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    border: 4px solid white;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+    transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease;
+}
+
+.color:hover {
+    transform: scale(1.2);
+}
+
+.color.active {
+    transform: scale(1.15);
+
+    box-shadow:
+            0 0 0 3px white,
+            0 0 0 6px #ff69b4;
+}
+
+
+.red {
+    background: #ff5c6c;
+}
+
+.orange {
+    background: #ff9f43;
+}
+
+.yellow {
+    background: #ffd93d;
+}
+
+.green {
+    background: #55c98a;
+}
+
+.blue {
+    background: #5b9df9;
+}
+
+.purple {
+    background: #a66cff;
+}
+
+.pink {
+    background: #ff69b4;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    body {
+        overflow-y: auto;
+    }
+
+    .container {
+        padding-top: 30px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .characters {
+        gap: 20px;
+    }
+
+    .animal {
+        transform: scale(0.75);
+        transform-origin: bottom;
+    }
+
+    .character h2 {
+        margin-top: -10px;
+    }
+
+    .color-panel {
+        margin-top: 30px;
+    }
+
+    .colors {
+        flex-wrap: wrap;
+        max-width: 250px;
+    }
+}
